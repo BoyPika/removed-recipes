@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "FFF",
+    "F F"
+  ],
+  "key": {
+    "F": {
+      "item": "removedrecipes:fire"
+    }
+  },
+  "result": {
+    "item": "minecraft:chainmail_helmet"
+  }
+}

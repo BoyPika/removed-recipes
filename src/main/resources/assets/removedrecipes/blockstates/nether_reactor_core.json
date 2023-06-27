@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": {"model": "removedrecipes:block/nether_reactor_core"}
+  }
+}

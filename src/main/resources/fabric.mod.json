@@ -1,0 +1,39 @@
+{
+	"schemaVersion": 1,
+	"id": "removedrecipes",
+	"version": "${version}",
+	"name": "Removed Recipes",
+	"description": "Adds back a good chunk of the removed recipes",
+	"authors": [
+		"BoyPika"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/removed-recipes",
+		"issues": "https://github.com/BoyPika/removed-recipes/issues",
+		"email": "boypika85@gmail.com"
+	},
+	"license": "GPL-3.0",
+	"icon": "icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.boypika.BossWhackers"
+		]
+	},
+	"mixins": [
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": ">=1.19.3",
+		"java": ">=17",
+		"fabric": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	},
+	"custom": {
+		"modmenu": {
+			"update_checker": true
+		}
+	}
+}
