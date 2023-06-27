@@ -9,18 +9,18 @@ import net.minecraft.item.*;
 import net.minecraft.registry.*;
 import net.minecraft.util.*;
 
-public class BossWhackers implements ModInitializer {
+public class RemovedRecipes implements ModInitializer {
 	public static final Item FIRE = new Item(new FabricItemSettings().fireproof());
 	public static final Item COPPER = new Item(new FabricItemSettings().maxCount(1));
-	public static final Block REACTOR = registerBlock("nether_reactor_core",
-			new Block(FabricBlockSettings.create().breakInstantly().liquid()));
-	private static Block registerBlock(String name, Block block) {
-		registerBlockItem(name, block);
-		return Registry.register(Registries.BLOCK, new Identifier("removedrecipes", name), block);
+	public static final Block REACTOR = registerBlock(
+			new Block(FabricBlockSettings.create().breakInstantly().solid()));
+	private static Block registerBlock(Block block) {
+		registerBlockItem(block);
+		return Registry.register(Registries.BLOCK, new Identifier("removedrecipes", "nether_reactor_core"), block);
 	}
 
-	private static Item registerBlockItem(String name, Block block) {
-		return Registry.register(Registries.ITEM, new Identifier("removedrecipes", name),
+	private static void registerBlockItem(Block block) {
+		Registry.register(Registries.ITEM, new Identifier("removedrecipes", "nether_reactor_core"),
 				new BlockItem(block, new FabricItemSettings()));
 	}
 
@@ -28,7 +28,6 @@ public class BossWhackers implements ModInitializer {
 	public void onInitialize() {
 		Registry.register(Registries.ITEM, new Identifier("removedrecipes", "fire"), FIRE);
 		Registry.register(Registries.ITEM, new Identifier("removedrecipes", "copper_horn"), COPPER);
-		System.out.println("[1.19.3 - 1.20.1] Boss Whackers Init");
-
+		System.out.println("[1.19.3 - 1.20.1] Recipes Init");
 	}
 }
