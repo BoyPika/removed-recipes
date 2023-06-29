@@ -14,8 +14,14 @@ import static net.minecraft.item.Items.register;
 
 public class RemovedRecipes implements ModInitializer {
 	//Items
-	public static final Item FIRE = register((new Identifier("removedrecipes","fire")), new AliasedBlockItem(Blocks.FIRE, new Item.Settings().fireproof()));
-	public static final Item COPPER = new Item(new FabricItemSettings().maxCount(1));
+	public static final Item FIRE;
+	public static final Item COPPER;
+
+	static {
+		FIRE = register((new Identifier("removedrecipes", "fire")), new AliasedBlockItem(Blocks.FIRE, new Item.Settings().fireproof()));
+		COPPER = register((new Identifier("removedrecipes","copper_horn")), new Item(new FabricItemSettings().maxCount(1)));
+	}
+	//Block
 	public static final Block REACTOR = registerBlock(
 			new Block(FabricBlockSettings.create().breakInstantly().solid()));
 	//BS to register the Reactor
@@ -28,10 +34,9 @@ public class RemovedRecipes implements ModInitializer {
 		Registry.register(Registries.ITEM, new Identifier("removedrecipes", "nether_reactor_core"),
 				new BlockItem(block, new FabricItemSettings()));
 	}
-	//Register the copper horn and let the people know of the mods presence
+	//Let the people know of the mods presence
 	@Override
 	public void onInitialize() {
-		Registry.register(Registries.ITEM, new Identifier("removedrecipes", "copper_horn"), COPPER);
 		System.out.println("[1.19.3 - 1.20.1] Recipes Init");
 	}
 }
