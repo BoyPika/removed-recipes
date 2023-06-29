@@ -1,0 +1,67 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " T ",
+    "TQT",
+    "SSS"
+  ],
+  "key": {
+    "T": [
+      {
+        "item": "minecraft:redstone_torch"
+      }
+    ],
+    "Q": [
+      {
+        "item": "minecraft:quartz"
+      }
+    ],
+    "S": [
+      {
+        "item": "minecraft:stone"
+      },
+      {
+        "item": "minecraft:smooth_stone"
+      },
+      {
+        "item": "minecraft:blackstone"
+      },
+      {
+        "item": "minecraft:polished_blackstone"
+      },
+      {
+        "item": "minecraft:andesite"
+      },
+      {
+        "item": "minecraft:polished_andesite"
+      },
+      {
+        "item": "minecraft:diorite"
+      },
+      {
+        "item": "minecraft:polished_diorite"
+      },
+      {
+        "item": "minecraft:deepslate"
+      },
+      {
+        "item": "minecraft:polished_deepslate"
+      },
+      {
+        "item": "minecraft:end_stone"
+      },
+      {
+        "item": "minecraft:end_stone_bricks"
+      },
+      {
+        "item": "minecraft:granite"
+      },
+      {
+        "item": "minecraft:polished_granite"
+      }
+    ]
+  },
+  "result": {
+    "item": "minecraft:comparator"
+  }
+}
