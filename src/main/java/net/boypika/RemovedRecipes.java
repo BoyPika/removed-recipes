@@ -10,15 +10,9 @@ import net.minecraft.item.*;
 import net.minecraft.registry.*;
 import net.minecraft.util.*;
 
-import static net.minecraft.item.Items.register;
-
 public class RemovedRecipes implements ModInitializer {
 	//Items
-	public static final Item FIRE;
-
-	static {
-		FIRE = register((new Identifier("removedrecipes", "fire")), new AliasedBlockItem(Blocks.FIRE, new Item.Settings().fireproof()));
-	}
+	public static final Item FIRE = Registry.register(Registries.ITEM, new Identifier("removedrecipes", "fire"), (new AliasedBlockItem(Blocks.FIRE, new Item.Settings().fireproof())));
 	//Block
 	public static final Block REACTOR = registerBlock(
 			new Block(AbstractBlock.Settings.create().solid().hardness(5.0F).requiresTool().mapColor(DyeColor.LIGHT_BLUE).resistance(10.0F)));
@@ -35,6 +29,6 @@ public class RemovedRecipes implements ModInitializer {
 	//Let the people know of the mods presence
 	@Override
 	public void onInitialize() {
-		System.out.println("[1.20 - 1.20.1] Recipes Init");
+		System.out.println("[1.19.3 - 1.19.4] Recipes Init");
 	}
 }
