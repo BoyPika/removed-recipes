@@ -3,7 +3,7 @@ package net.boypika;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.*;
@@ -23,7 +23,7 @@ public class RemovedRecipes implements ModInitializer {
 	}
 	//Block
 	public static final Block REACTOR = registerBlock(
-			new Block(FabricBlockSettings.create().breakInstantly().solid()));
+			new Block(AbstractBlock.Settings.create().solid().hardness(5.0F).requiresTool().mapColor(DyeColor.LIGHT_BLUE).resistance(10.0F)));
 	//BS to register the Reactor
 	private static Block registerBlock(Block block) {
 		registerBlockItem(block);
