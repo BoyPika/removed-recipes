@@ -20,11 +20,9 @@
 			"net.boypika.RemovedRecipes"
 		]
 	},
-	"mixins": [
-	],
 	"depends": {
 		"fabricloader": ">=0.14.21",
-		"minecraft": ">=1.19.3",
+		"minecraft": ">=1.20",
 		"java": ">=17",
 		"fabric": "*"
 	},

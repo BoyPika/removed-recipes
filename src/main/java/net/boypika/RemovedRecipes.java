@@ -15,11 +15,9 @@ import static net.minecraft.item.Items.register;
 public class RemovedRecipes implements ModInitializer {
 	//Items
 	public static final Item FIRE;
-	public static final Item COPPER;
 
 	static {
 		FIRE = register((new Identifier("removedrecipes", "fire")), new AliasedBlockItem(Blocks.FIRE, new Item.Settings().fireproof()));
-		COPPER = register((new Identifier("removedrecipes","copper_horn")), new Item(new FabricItemSettings().maxCount(1)));
 	}
 	//Block
 	public static final Block REACTOR = registerBlock(
@@ -37,6 +35,6 @@ public class RemovedRecipes implements ModInitializer {
 	//Let the people know of the mods presence
 	@Override
 	public void onInitialize() {
-		System.out.println("[1.19.3 - 1.20.1] Recipes Init");
+		System.out.println("[1.20 - 1.20.1] Recipes Init");
 	}
 }
